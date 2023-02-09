@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <script src="js/jquery-3.6.0.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+		   function getconfirmbox()
+		   {
+		    var retval = confirm("do you wamnt to continue?");
+			if (retval == true){
+			document.write("user wants to continue!!");
+			return true;
+		   }
+		   else{
+		   document.write("user does not wants to continue!!");
+		   }
+		   }
+		</script>
+   </head>
+   <body>
+   <input type ="button" onclick="getconfirmbox();" value ="click here">
+   </body>
+		</html>

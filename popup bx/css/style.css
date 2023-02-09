@@ -1,0 +1,27 @@
+/*CSS*/
+*
+{
+	padding:0;
+	margin:0;
+}
+body
+{
+	padding:0;
+	margin:0;
+	background-color:#008080 !important;
+}
+textarea#exampleFormControlTextarea6 {
+    margin-top: 30px;
+}
+label.text-title {
+    text-align: center;
+    font-size: 23px;
+    width: 100%;
+    font-weight: 900;
+}
+.feedback{
+	display:none;
+}
+.show{
+	display:block;
+}

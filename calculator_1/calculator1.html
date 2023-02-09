@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <title>Document</title>
+    <script>
+
+function display(val){
+   document.getElementById('screen').value+=val;
+  
+}
+
+function solve(){
+  let x = document.getElementById('screen').value;
+  let y = eval(x);
+  document.getElementById('screen').value=y;
+}
+function clr(){
+   document.getElementById("screen").value = "";
+
+}
+
+function root(val){
+  
+  //let number = document.getElementById('screen').value;
+  //let result = Math.sqrt(number);
+  //document.getElementById("screen").value = result;
+  let number = document.getElementById('screen').value;
+  //alert( Math.sqrt(number))
+ let result =  document.getElementById('screen').innerHTML = Math.sqrt(number);
+ document.getElementById('screen').value = result;
+}
+
+function history(){
+  history.back();
+}
+
+function mathsin(){
+  let number = document.getElementById('screen').value;
+  let result = document.getElementById('screen').value = Math.sin(number);
+  document.getElementById('screen').value = result;
+
+}
+function mathcos(){
+  let number = document.getElementById('screen').value;
+  let result = document.getElementById('screen').value = Math.cos(number);
+  document.getElementById('screen').value = result;
+
+}
+function mathtan(){
+  let number = document.getElementById('screen').value;
+  let result = document.getElementById('screen').value = Math.tan(number);
+  document.getElementById('screen').value = result;
+
+}
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid" style="padding-bottom: 5px;">
+          <div class="row">
+            <div class="col-md-4">
+              <!---header-part-->
+            <div class="row header">
+                 <div class="col-md-2">
+                  <i class="glyphicon glyphicon-menu-hamburger"></i>
+                 </div>
+                 <div class="col-md-8">
+                    <p style="text-align: center; padding-top: 2px; margin-top:2px;">Calculator</p>
+                 </div>
+                 <div class="col-md-2">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </a>
+                 </div>
+                 <div class="gethistory">
+                          <p id="history-value"></p>
+                 </div>
+            </div>
+            <!--textarea-->
+            <div class="row textarea">
+              <div class="col-md-12">
+                <input type="text" id="screen" class="col-md-12 textarea-total" placeholder="Total Count"/>
+              </div>
+               
+         </div>
+           <!--buttons design-->
+                 <div class="row buttons-design">
+                     <!--first row-->
+                   <div class="col-md-3">
+                      <input type="button" value="&#8730;" onclick="root('&#8730')" class="btn-design"/>
+                    </div>
+                   <div class="col-md-3">
+                    <input type="button" value="(" onclick="display('(')" class="btn-design"/>
+                   </div>
+                   <div class="col-md-3">
+                    <input type="button" value=")" onclick="display(')')" class="btn-design"/>
+                   </div>
+                   <div class="col-md-3">
+                     <input type="button" value="%" onclick="display('%')" class="btn-design"/>
+                    </div>
+
+                   <!---second-row-->
+                      <div class="col-md-3">
+                        <input type="button" value="7" onclick="display('7')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="8" onclick="display('8')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="9" onclick="display('9')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="/" onclick="display('/')" class="btn-design"/>
+                      </div>
+
+                      <!---third-row-->
+                      <div class="col-md-3">
+                        <input type="button" value="4" onclick="display('4')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="5" onclick="display('5')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="6" onclick="display('6')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="*" onclick="display('*')" class="btn-design"/>
+                      </div>
+
+                      <!---fourth-row-->
+                      <div class="col-md-3">
+                        <input type="button" value="1" onclick="display('1')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="2" onclick="display('2')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="3" onclick="display('3')" class="btn-design"/>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" value="-" onclick="display('-')" class="btn-design"/>
+                      </div>
+
+                 <!--fifth row-->
+                 <div class="col-md-3">
+                  <input type="button" value="Sin" onclick="mathsin('Sin')" class="btn-design"/>
+                </div>
+                <div class="col-md-3">
+                  <input type="button" value="cos" onclick="mathcos('cos')" class="btn-design"/>
+                </div>
+                <div class="col-md-3">
+                  <input type="button" value="Tan" onclick="mathtan('Tan')" class="btn-design"/>
+                </div>
+                <div class="col-md-3">
+                  <input type="button" value="His" onclick="history()" class="btn-design"/>
+                </div>
+                 </div>
+
+                 <!--button-new-->
+                 <div class="row buttonnew">
+                  <div class="col-md-9">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <input type="button" onclick="display('0')" value="0" class="btn1">
+                      </div>
+                      <div class="col-md-4">
+                        <input type="button" onclick="display('.')" value="." class="btn2">
+                      </div>
+                      <div class="col-md-3">
+                        <input type="button" onclick="clr()" value="Delete" id="del" class="btn3">
+                      </div>
+                      <div class="col-md-9">
+                        <input type="button" onclick="solve('=')" value="=" id="equal" class="btn4">
+                      </div>
+                    </div>
+                  </div> <!-- end  zero, dot, del and equal sign div -->
+                  <div class="col-md-3">
+                    <input type="button" value="+" onclick="display('+')" id="plus"/>
+                      <!--<input type="button" onclick= "display('+')" value="+" id="plus" class="btnplus">!--->
+                  </div>
+                </div><!---end button-new-->
+       </div>
+       </div>
+</body>
+</html>
